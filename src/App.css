@@ -164,10 +164,72 @@ main ul {
   grid-gap: 30px;
 }
 
+main li {
+  position: relative;
+}
+
 main img {
   width: 172.5px;
   height: 172.5px;
   box-sizing: border-box;
+}
+
+.rollOver {
+  color: white;
+  text-align: center;
+  width: 172.5px;
+  height: 172.5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.rollOver:hover {
+  opacity: 1;
+}
+
+#searchPanel {
+  display: none;
+}
+
+.shadeOn {
+  background-color: black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  transition: 0.8s;
+}
+
+.shadeOff {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchPanelOff {
+  background-color: white;
+  height: 100%;
+  width: 232.5px;
+  position: absolute;
+  left: -232.5px;
+  top: 50px;
+  padding: 30px;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.searchPanelOn {
+  left: -232.5px;
 }
 
 @media only screen and (max-width: 1042.5px) {
@@ -251,5 +313,20 @@ main img {
   main img {
     width: 110px;
     height: 110px;
+  }
+
+  .rollOver {
+    width: 110px;
+    height: 110px;
+    padding: 20px;
+  }
+
+  .shadeOn {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+
+  .searchPanelOn {
+    left: 0;
   }
 }

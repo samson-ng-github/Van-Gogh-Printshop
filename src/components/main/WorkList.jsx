@@ -8,6 +8,7 @@ const WorkList = () => {
       return (
         <WorkThumb
           key={work.id}
+          name={work.name}
           src={'/src/assets/workThumbs/' + work.id + '.jpg'}
         />
       );
