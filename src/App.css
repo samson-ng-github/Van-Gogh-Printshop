@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Book';
+  src: url('./assets/fonts/Book.otf');
+  font-display: hide;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('./assets/fonts/Bold.otf');
+  font-display: hide;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-color: #ffce01;
+  font-family: 'Book';
+  font-size: 12.5px;
+}
+
+#guide {
+  width: 1366px;
+  height: 1024px;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -683px;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  position: sticky;
+}
+
+#container {
+  width: 982.5px;
+  height: auto;
+  margin: 50px auto;
+  position: relative;
+}
+
+aside {
+  width: 172.5px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  width: 172.5px;
+  height: 172.5px;
+  display: block;
+}
+
+p {
+  margin: 30px 0 0;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+  fill: black;
+  position: absolute;
+}
+
+#searchBar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 30px 0 0;
+}
+
+#searchField {
+  font-family: 'Book';
+  font-size: 12.5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  padding-left: 12px;
+  padding-right: 42px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+#searchField::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+#filters {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buttonBar {
+  width: 100%;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.label {
+  font-family: 'Bold';
+  font-size: 15px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  left: 28px;
+  user-select: none;
+  position: absolute;
+}
+
+#mapButtonBar {
+  margin-top: 4px;
+}
+
+main {
+  width: 780px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 172.5px;
+  grid-template-columns: repeat(4, 172.5px);
+  justify-content: start;
+  list-style-type: none;
+  grid-gap: 30px;
+}
+
+main img {
+  width: 172.5px;
+  height: 172.5px;
+  border: 0 solid black;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1072.5px) {
+  main {
+    width: 577.5px;
+  }
+
+  #container {
+    width: 780px;
+  }
+  main ul {
+    grid-template-columns: repeat(3, 172.5px);
+  }
+}
