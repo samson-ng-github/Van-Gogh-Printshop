@@ -7,7 +7,7 @@ const WorkList = () => {
     .map((work) => {
       return (
         <WorkThumb
-          id={work.id}
+          key={work.id}
           src={'/src/assets/workThumbs/' + work.id + '.jpg'}
         />
       );

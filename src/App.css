@@ -22,28 +22,46 @@ body {
 }
 
 #guide {
-  width: 1366px;
-  height: 1024px;
-  opacity: 0.5;
+  width: 390px;
+  height: 844px;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -683px;
+  margin-left: -195px;
 }
 
 nav {
   width: 100%;
   height: 50px;
-  position: absolute;
-  top: 0;
   background-color: black;
-  position: sticky;
+  position: fixed;
+  top: 0;
+}
+
+#navIcons {
+  width: 982.5px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  gap: 13px;
+  justify-content: flex-end;
+}
+
+nav svg {
+  margin: 13px 0 13px;
+  fill: white;
+  position: relative;
+}
+
+#navBarSearchButton {
+  display: none;
 }
 
 #container {
   width: 982.5px;
   height: auto;
-  margin: 50px auto;
+  margin: 80px auto;
   position: relative;
 }
 
@@ -61,7 +79,7 @@ aside {
   display: block;
 }
 
-p {
+aside p {
   margin: 30px 0 0;
 }
 
@@ -128,7 +146,7 @@ svg {
 
 main {
   width: 780px;
-  height: 800px;
+  height: auto;
   position: absolute;
   top: 0;
   right: 0;
@@ -149,19 +167,89 @@ main ul {
 main img {
   width: 172.5px;
   height: 172.5px;
-  border: 0 solid black;
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1072.5px) {
+@media only screen and (max-width: 1042.5px) {
+  #container,
+  #navIcons {
+    width: 780px;
+  }
+
   main {
     width: 577.5px;
   }
 
-  #container {
-    width: 780px;
-  }
   main ul {
     grid-template-columns: repeat(3, 172.5px);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  #container,
+  #navIcons {
+    width: 577.5px;
+  }
+
+  main {
+    width: 375px;
+  }
+
+  main ul {
+    grid-template-columns: repeat(2, 172.5px);
+  }
+}
+
+@media only screen and (max-width: 637.5px) {
+  #container,
+  #navIcons {
+    width: 360px;
+  }
+
+  main {
+    width: 172.5px;
+  }
+
+  main ul {
+    grid-template-columns: repeat(1, 172.5px);
+  }
+
+  #navBarSearchButton,
+  #searchMenu,
+  #mapMenu {
+    display: none;
+  }
+
+  #navBarSearchButton {
+    display: inline;
+  }
+
+  aside {
+    width: 360px;
+    margin: 0;
+  }
+
+  aside p {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 187.5px;
+    width: 172.5px;
+  }
+
+  main {
+    width: 360px;
+    top: 202.5px;
+  }
+
+  main ul {
+    grid-auto-rows: 110px;
+    grid-template-columns: repeat(3, 110px);
+    grid-gap: 15px;
+  }
+
+  main img {
+    width: 110px;
+    height: 110px;
   }
 }

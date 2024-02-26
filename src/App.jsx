@@ -1,5 +1,6 @@
 import './App.css';
-import guide from './assets/template-ipad.jpg';
+import guide from './assets/template-iphone.jpg';
+import NavBar from './components/nav/NavBar';
 import Intro from './components/aside/Intro';
 import SearchMenu from './components/aside/SearchMenu';
 import MapMenu from './components/aside/MapMenu';
@@ -8,8 +9,7 @@ import WorkList from './components/main/WorkList';
 const App = () => {
   return (
     <>
-      {/*<img id="guide" src={guide} />*/}
-      <nav />
+      <img id="guide" src={guide} />
       <div id="container">
         <aside>
           <Intro />
@@ -20,6 +20,7 @@ const App = () => {
           <WorkList />
         </main>
       </div>
+      <NavBar />
     </>
   );
 };
