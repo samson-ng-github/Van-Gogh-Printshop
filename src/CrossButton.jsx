@@ -1,6 +1,6 @@
-export const CrossButton = ({ style, id }) => {
+export const CrossButton = ({ style, id, toggleWorkModule }) => {
   return (
-    <svg style={style} id={id}>
+    <svg style={style} id={id} onClick={toggleWorkModule}>
       <circle cx="12" cy="12" r="12" />
       <path
         style={{ fill: 'white' }}

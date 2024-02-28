@@ -1,7 +1,7 @@
 import WorkThumb from './WorkThumb';
 import workData from '../../data/workData.json';
 
-const WorkList = () => {
+const WorkList = ({ toggleWorkModule }) => {
   const WorkListUl = workData
     .sort(() => Math.random() - 0.5)
     .map((work) => {
@@ -10,6 +10,7 @@ const WorkList = () => {
           key={work.id}
           name={work.name}
           src={'/src/assets/workThumbs/' + work.id + '.jpg'}
+          toggleWorkModule={toggleWorkModule}
         />
       );
     });
