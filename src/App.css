@@ -126,7 +126,6 @@ svg {
   line-height: 24px;
   margin: 0;
   left: 28px;
-  user-select: none;
   position: absolute;
 }
 
@@ -190,19 +189,20 @@ main img {
   display: none;
 }
 
-.shadeOn {
+.shadeOff {
   background-color: black;
-  opacity: 0;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
+  opacity: 0;
+  pointer-events: none;
   transition: 0.5s;
 }
 
-.shadeOff {
-  opacity: 0;
-  pointer-events: none;
+.shadeOnWorkModel {
+  opacity: 0.3;
+  pointer-events: auto;
 }
 
 .searchPanelOff {
@@ -215,11 +215,9 @@ main img {
   padding: 30px;
   display: block;
   box-sizing: border-box;
+  filter: none;
   transition: 0.5s;
-}
-
-.searchPanelOn {
-  left: -232.5px;
+  position: fixed;
 }
 
 #guide {
@@ -230,6 +228,18 @@ main img {
   top: 0;
   left: 50%;
   margin-left: -683px;
+}
+
+.workModuleOn {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.workModuleOff {
+  top: 0%;
 }
 
 #workModule {
@@ -244,20 +254,6 @@ main img {
   transform: translateY(-50%);
   filter: drop-shadow(0 0 4rem black);
   position: absolute;
-}
-
-.workModuleOn {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  user-select: none;
-}
-
-.workModuleOff {
-  top: 0%;
-  user-select: none;
 }
 
 #workHero {
@@ -402,6 +398,16 @@ main img {
 }
 
 @media only screen and (max-width: 637.5px) {
+  .searchPanelOn {
+    left: -232.5px;
+    filter: drop-shadow(0 0 4rem black);
+  }
+
+  .shadeOnSearchPanel {
+    opacity: 0.3;
+    pointer-events: auto;
+  }
+
   #container,
   #navIcons {
     width: 360px;
@@ -460,13 +466,12 @@ main img {
     padding: 20px;
   }
 
-  .shadeOn {
-    opacity: 0.5;
-    pointer-events: auto;
-  }
-
   .searchPanelOn {
     left: 0;
+  }
+
+  .rollOver {
+    padding: 15px;
   }
 }
 

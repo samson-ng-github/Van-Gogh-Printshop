@@ -1,19 +1,16 @@
 import WorkThumb from './WorkThumb';
-import workData from '../../data/workData.json';
 
-const WorkList = ({ toggleWorkModule }) => {
-  const WorkListUl = workData
-    .sort(() => Math.random() - 0.5)
-    .map((work) => {
-      return (
-        <WorkThumb
-          key={work.id}
-          name={work.name}
-          src={'/src/assets/workThumbs/' + work.id + '.jpg'}
-          toggleWorkModule={toggleWorkModule}
-        />
-      );
-    });
+const WorkList = ({ workList, toggleWorkModule }) => {
+  const WorkListUl = workList.map((work) => {
+    return (
+      <WorkThumb
+        key={work.id}
+        name={work.name}
+        src={'/src/assets/workThumbs/' + work.id + '.jpg'}
+        toggleWorkModule={toggleWorkModule}
+      />
+    );
+  });
 
   return <ul>{WorkListUl}</ul>;
 };
