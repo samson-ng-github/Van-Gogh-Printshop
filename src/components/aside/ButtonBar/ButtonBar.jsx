@@ -6,7 +6,7 @@ import MapButton from './MapButton';
 
 const ButtonBar = ({ id, buttonName, label }) => {
   const [highlight, setHighlight] = useState(false);
-  const color = '#793711'; // Complimentary purple '#0132FF';
+  const color = '#1f3279'; // Complimentary purple '#0132FF';
 
   const getButton = (buttonName) => {
     switch (buttonName) {
