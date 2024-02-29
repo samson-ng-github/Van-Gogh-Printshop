@@ -201,7 +201,7 @@ main img {
 }
 
 .shadeOnWorkModel {
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: auto;
 }
 
@@ -223,26 +223,26 @@ main img {
 #guide {
   width: 1366px;
   height: 1024px;
-  opacity: 1;
+  opacity: 0.8;
   position: absolute;
   top: 0;
   left: 50%;
   margin-left: -683px;
 }
 
-.workModuleOn {
+.workPanelOn {
   position: fixed;
-  top: 100%;
+  top: 150%;
   width: 100%;
   height: 100%;
   transition: 0.5s;
 }
 
-.workModuleOff {
+.workPanelOff {
   top: 0%;
 }
 
-#workModule {
+#workPanel {
   width: 890px;
   height: auto;
   border-radius: 25px;
@@ -296,7 +296,7 @@ main img {
 #workPrices input {
   width: 12px;
   height: 12px;
-  margin: 1px 4px 1px 4px;
+  margin: 1px 5px 1px 5px;
 }
 
 #workPrices label {
@@ -316,14 +316,9 @@ main img {
 
 #workPrices label .price {
   position: absolute;
-  right: 4px;
+  right: 5px;
   font-family: 'Bold';
   color: #888888;
-}
-
-#addToCartButton {
-  width: 60px;
-  height: 60px;
 }
 
 #workMapMenu {
@@ -345,10 +340,175 @@ main img {
   margin-bottom: 15px;
 }
 
-#workModuleClose {
+#cartPanel {
+  width: 390px;
+  height: auto;
+  border-radius: 25px;
+  background-color: white;
+  opacity: 1;
+  left: 50%;
+  margin-left: -195px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 0 4rem black);
+  position: absolute;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.cartPanelOn {
+  position: fixed;
+  top: -150%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.cartPanelOff {
+  top: 0%;
+}
+
+#cartTitle {
+  font-size: 25px;
+  font-family: 'Bold';
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+#cartItems {
+  display: flex;
+  justify-content: start;
+  list-style-type: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+#cartItems li {
+  width: 100%;
+  height: 125px;
+  display: flex;
+}
+
+#cartItems li img {
+  width: 125px;
+  height: 125px;
+}
+
+.itemInfo {
+  width: 190px;
+  height: 125px;
+  font-size: 15px;
+  flex: 1;
+  padding-left: 15px;
+  position: relative;
+}
+
+.itemTitle {
+  font-family: 'Bold';
+  margin: 0;
+}
+
+.itemSize {
+  font-family: 'Book';
+  padding-left: 3px;
+}
+
+.itemPrice {
+  font-family: 'Bold';
+  position: absolute;
+  right: 5px;
+  margin: 0;
+  color: #888888;
+}
+
+.binButton {
+  bottom: 0;
+  right: 0;
+}
+
+#total {
+  height: 30px;
+  font-size: 15px;
+  font-family: 'Bold';
+  padding: 30px 0 30px;
+  display: flex;
+}
+
+#totalTag {
+  background-color: #b2b2b2;
+  color: black;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 5px;
+  width: 125px;
+  box-sizing: border-box;
+}
+
+#totalPrice {
+  background-color: #7f7f7f;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 5px;
+  flex: 1;
+}
+
+.itemCount {
+  width: 50px;
+  height: 15px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.plusButton {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.itemCountText {
+  height: 15px;
+  line-height: 15px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: #aaaaaa;
+  font-family: 'bold';
+}
+
+.minusButton {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+}
+
+#checkout {
+  font-size: 25px;
+  font-family: 'Bold';
+  margin: 0;
+  padding: 0;
+  background-color: #ffce01;
+  border: 0;
+  width: 210px;
+  height: 60px;
+  border-radius: 30px;
+  margin: auto;
+  display: block;
+}
+
+#closeButton {
   position: absolute;
   right: 18px;
   top: 18px;
+}
+
+hr {
+  margin: 4px 0 4px;
 }
 
 @media only screen and (max-width: 1042.5px) {
@@ -365,7 +525,7 @@ main img {
     grid-template-columns: repeat(3, 172.5px);
   }
 
-  #workModule {
+  #workPanel {
     width: 460px;
     margin-left: -230px;
   }
@@ -381,7 +541,6 @@ main img {
     width: 100%;
   }
 }
-
 @media only screen and (max-width: 840px) {
   #container,
   #navIcons {
@@ -404,7 +563,7 @@ main img {
   }
 
   .shadeOnSearchPanel {
-    opacity: 0.3;
+    opacity: 0.4;
     pointer-events: auto;
   }
 
@@ -482,7 +641,7 @@ main img {
     padding-right: 30px;
     box-sizing: border-box;
   }
-  #workModule {
+  #workPanel {
     min-width: 320px;
     width: 100%;
     height: 100%;
@@ -505,8 +664,33 @@ main img {
   }
 }
 
+@media only screen and (max-width: 390px) {
+  #cartPanel {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    filter: none;
+    border-radius: 0;
+    top: 50px;
+    left: 0;
+    transform: none;
+    margin: 0;
+  }
+  #total {
+    grid-template-columns: 40% auto;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   #workPrices label .type {
     font-size: 10px;
+  }
+
+  .itemInfo {
+    font-size: 12px;
+  }
+
+  .itemCount {
+    margin-top: 5px;
   }
 }

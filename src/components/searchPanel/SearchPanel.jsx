@@ -13,7 +13,7 @@ const SearchPanel = ({ isSearchPanelOn, toggleSearchPanel }) => {
         <ButtonBar buttonName="LandscapeButton" label="Landscape" />
         <ButtonBar buttonName="StillLifeButton" label="Still life" />
       </div>
-      <CrossButton id="workModuleClose" toggleSearchPanel={toggleSearchPanel} />
+      <CrossButton id="closeButton" toggleSearchPanel={toggleSearchPanel} />
     </div>
   );
 };

@@ -1,14 +1,12 @@
-import workHero from '../../assets/works/F779JH2117.jpg'; //F789JH2006
+import workHero from '../../assets/works/F789JH2006.jpg'; //F779JH2117
 import AddToCartButton from './AddToCartButton';
 import CrossButton from './CrossButton';
 import WorkPanelMapMenu from './WorkPanelMapMenu';
 
-const WorkPanel = ({ isWorkModuleOn, toggleWorkModule }) => {
+const WorkPanel = ({ isWorkPanelOn, toggleWorkPanel }) => {
   return (
-    <section
-      className={'workModuleOn ' + (isWorkModuleOn ? 'workModuleOff' : '')}
-    >
-      <div id="workModule">
+    <section className={'workPanelOn ' + (isWorkPanelOn ? 'workPanelOff' : '')}>
+      <div id="workPanel">
         <img id="workHero" src={workHero} />
         <div id="workInfo">
           <h1 id="workTitle">The Church at Auvers</h1>
@@ -49,7 +47,7 @@ const WorkPanel = ({ isWorkModuleOn, toggleWorkModule }) => {
           <AddToCartButton />
           <WorkPanelMapMenu />
         </div>
-        <CrossButton id="workModuleClose" toggleWorkModule={toggleWorkModule} />
+        <CrossButton id="closeButton" toggleWorkPanel={toggleWorkPanel} />
       </div>
     </section>
   );

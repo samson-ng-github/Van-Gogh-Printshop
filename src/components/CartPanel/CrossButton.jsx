@@ -1,6 +1,7 @@
-export const CrossButton = ({ style, id, toggleWorkPanel }) => {
+export const CrossButton = ({ style, id, toggleCartPanel }) => {
+  console.log(toggleCartPanel);
   return (
-    <svg style={style} id={id} onClick={toggleWorkPanel}>
+    <svg style={style} id={id} onClick={toggleCartPanel}>
       <circle cx="12" cy="12" r="12" />
       <path
         style={{ fill: 'white' }}

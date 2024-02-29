@@ -1,6 +1,6 @@
-const WorkThumb = ({ src, name, toggleWorkModule }) => {
+const WorkThumb = ({ src, name, toggleWorkPanel }) => {
   return (
-    <li onClick={toggleWorkModule}>
+    <li onClick={toggleWorkPanel}>
       <div className={'rollOver'}>{name}</div>
       <img src={src} />
     </li>
