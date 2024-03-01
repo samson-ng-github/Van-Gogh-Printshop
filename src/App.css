@@ -396,7 +396,6 @@ p {
 
 .itemTitle {
   font-family: 'Bold';
-  margin: 0;
 }
 
 .itemSize {
@@ -491,7 +490,6 @@ p {
 }
 
 .closeButton {
-  position: absolute;
   right: 18px;
   top: 18px;
 }
@@ -517,6 +515,9 @@ p {
 
   #workHero {
     position: relative;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: 0 0;
   }
 
   #workInfo {
@@ -617,6 +618,10 @@ p {
   .rollOver {
     padding: 15px;
   }
+
+  .mapMenu {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 460px) {
@@ -663,6 +668,10 @@ p {
   }
   #cartTotal {
     grid-template-columns: 40% auto;
+  }
+  #workTitle {
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
