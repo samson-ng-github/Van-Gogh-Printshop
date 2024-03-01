@@ -1,15 +1,13 @@
-import SearchBar from './SearchBar/SearchBar';
-import ButtonBar from './ButtonBar/ButtonBar';
+import SearchBar from './SearchBar';
+import ButtonBar from '../Buttons/ButtonBar';
 
 const SearchMenu = () => {
   return (
-    <div id="searchMenu">
+    <div className="searchMenu">
       <SearchBar />
-      <div id="filters">
-        <ButtonBar buttonName="PortraitButton" label="Portrait" />
-        <ButtonBar buttonName="LandscapeButton" label="Landscape" />
-        <ButtonBar buttonName="StillLifeButton" label="Still life" />
-      </div>
+      <ButtonBar buttonType="PortraitButton" label="Portrait" />
+      <ButtonBar buttonType="LandscapeButton" label="Landscape" />
+      <ButtonBar buttonType="StillLifeButton" label="Still life" />
     </div>
   );
 };

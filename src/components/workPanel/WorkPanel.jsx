@@ -1,7 +1,7 @@
 import workHero from '../../assets/works/F789JH2006.jpg'; //F779JH2117
-import AddToCartButton from './AddToCartButton';
-import CrossButton from './CrossButton';
-import WorkPanelMapMenu from './WorkPanelMapMenu';
+import AddToCartButton from '../Buttons/AddToCartButton';
+import CloseButton from '../Buttons/CloseButton';
+import MapMenu from '../Aside/MapMenu';
 
 const WorkPanel = ({ isWorkPanelOn, toggleWorkPanel }) => {
   return (
@@ -45,9 +45,9 @@ const WorkPanel = ({ isWorkPanelOn, toggleWorkPanel }) => {
             </form>
           </div>
           <AddToCartButton />
-          <WorkPanelMapMenu />
+          <MapMenu />
         </div>
-        <CrossButton id="closeButton" toggleWorkPanel={toggleWorkPanel} />
+        <CloseButton onclick={toggleWorkPanel} />
       </div>
     </section>
   );

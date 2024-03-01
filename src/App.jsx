@@ -1,16 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import workData from './data/workData.json';
-import NavBar from './components/nav/NavBar';
-import Intro from './components/aside/Intro';
-import SearchMenu from './components/aside/SearchMenu';
-import MapMenu from './components/aside/MapMenu';
-import WorkList from './components/main/WorkList';
+import NavBar from './components/NavBar/NavBar';
+import Aside from './components/Aside/Aside';
+import WorkList from './components/WorkList/WorkList';
 import SearchPanel from './components/SearchPanel/SearchPanel';
 import WorkPanel from './components/WorkPanel/WorkPanel';
 import CartPanel from './components/CartPanel/CartPanel';
-
-import guide from './assets/template-ipad-cart.jpg';
+import Shade from './components/Shade/Shade';
 
 const App = () => {
   const [isSearchPanelOn, setSearchPanelOn] = useState(false);
@@ -31,7 +28,6 @@ const App = () => {
     setCartPanelOn(!isCartPanelOn);
     setWorkPanelOn(false);
     setSearchPanelOn(false);
-    console.log('cart');
   };
 
   const randomizeWorkList = () => {
@@ -46,26 +42,18 @@ const App = () => {
   return (
     <>
       <div id="container">
-        <aside>
-          <Intro randomizeWorkList={randomizeWorkList} />
-          <SearchMenu />
-          <MapMenu />
-        </aside>
-        <main>
-          <WorkList workList={workList} toggleWorkPanel={toggleWorkPanel} />
-        </main>
+        <Aside randomizeWorkList={randomizeWorkList} />
+        <WorkList workList={workList} toggleWorkPanel={toggleWorkPanel} />
       </div>
       <NavBar
         toggleSearchPanel={toggleSearchPanel}
         toggleCartPanel={toggleCartPanel}
       />
-      <div
-        className={
-          'shadeOff ' +
-          (isSearchPanelOn ? 'shadeOnSearchPanel' : '') +
-          (isWorkPanelOn || isCartPanelOn ? 'shadeOnWorkModel' : '')
-        }
-      ></div>
+      <Shade
+        isSearchPanelOn={isSearchPanelOn}
+        isWorkPanelOn={isWorkPanelOn}
+        isCartPanelOn={isCartPanelOn}
+      />
       <SearchPanel
         isSearchPanelOn={isSearchPanelOn}
         toggleSearchPanel={toggleSearchPanel}

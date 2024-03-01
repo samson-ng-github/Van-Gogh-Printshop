@@ -1,13 +1,11 @@
-import ButtonBar from './ButtonBar/ButtonBar';
+import ButtonBar from '../Buttons/ButtonBar';
 
 const MapMenu = () => {
   return (
-    <div id="mapMenu">
-      <p>
-        Would you like to see the real paintings? Find out where they are here:
-      </p>
-      <div id="mapButtonBar">
-        <ButtonBar buttonName="MapButton" label="Map view" />
+    <div className="mapMenu">
+      <p>Find out where the real paintings are here:</p>
+      <div className="mapButtonBar">
+        <ButtonBar buttonType="MapButton" label="Map view" />
       </div>
     </div>
   );
