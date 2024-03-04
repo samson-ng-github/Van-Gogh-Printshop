@@ -1,13 +1,35 @@
+import { useDispatch } from 'react-redux';
+import { openCartPanel, closeCartPanel } from '../../redux/cartSlice';
+import {
+  openSearchPanel,
+  closeSearchPanel,
+} from '../../redux/searchPanelSlice';
+import { closeWorkPanel } from '../../redux/workPanelSlice';
+
 import LoginButton from './LoginButton';
 import CartButton from './CartButton';
 import NavBarSearchButton from './NavBarSearchButton';
 
-const NavBar = ({ toggleSearchPanel, toggleCartPanel }) => {
+const NavBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <nav>
       <div id="navIcons">
-        <NavBarSearchButton onclick={toggleSearchPanel} />
-        <CartButton onclick={toggleCartPanel} />
+        <NavBarSearchButton
+          action={() => {
+            dispatch(openSearchPanel());
+            dispatch(closeWorkPanel());
+            dispatch(closeCartPanel());
+          }}
+        />
+        <CartButton
+          action={() => {
+            dispatch(openCartPanel());
+            dispatch(closeSearchPanel());
+            dispatch(closeWorkPanel());
+          }}
+        />
         <LoginButton />
       </div>
     </nav>

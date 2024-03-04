@@ -1,6 +1,6 @@
-const NavBarSearchButton = ({ onclick }) => {
+const NavBarSearchButton = ({ action }) => {
   return (
-    <svg className="button navButton" id="navBarSearchButton" onClick={onclick}>
+    <svg className="button navButton" id="navBarSearchButton" onClick={action}>
       <path
         d="M23.4,20.7l-5.4-5.4c2.6-3.8,2.2-9.1-1.2-12.5C13-1,6.7-1,2.9,2.9C-1,6.7-1,13,2.9,16.9c1.9,1.9,4.5,2.9,7,2.9
 	c1.9,0,3.8-0.6,5.5-1.7l5.4,5.4c0.4,0.4,0.9,0.6,1.3,0.6c0.5,0,1-0.2,1.3-0.6C24.2,22.7,24.2,21.5,23.4,20.7z M4.6,15.1

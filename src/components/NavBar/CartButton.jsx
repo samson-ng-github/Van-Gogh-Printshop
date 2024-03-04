@@ -1,6 +1,6 @@
-const CartButton = ({ onclick }) => {
+const CartButton = ({ action }) => {
   return (
-    <svg className="button navButton" onClick={onclick}>
+    <svg className="button navButton" onClick={action}>
       <path
         d="M9.6,21.6c0,1.3-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4S9.6,20.3,9.6,21.6z M20.4,19.2
 	c-1.3,0-2.4,1.1-2.4,2.4c0,1.3,1.1,2.4,2.4,2.4s2.4-1.1,2.4-2.4C22.8,20.3,21.7,19.2,20.4,19.2z M21.6,12.3L24,3.9

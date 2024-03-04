@@ -1,9 +1,15 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { closeWorkPanel } from '../../redux/workPanelSlice';
+
 import workHero from '../../assets/works/F789JH2006.jpg'; //F779JH2117
 import AddToCartButton from '../Buttons/AddToCartButton';
 import CloseButton from '../Buttons/CloseButton';
 import MapMenu from '../Aside/MapMenu';
 
-const WorkPanel = ({ isWorkPanelOn, toggleWorkPanel }) => {
+const WorkPanel = () => {
+  const { isWorkPanelOn } = useSelector((store) => store.workPanel);
+  const dispatch = useDispatch();
+
   return (
     <section className={'workPanelOn ' + (isWorkPanelOn ? 'workPanelOff' : '')}>
       <div id="workPanel">
@@ -47,7 +53,7 @@ const WorkPanel = ({ isWorkPanelOn, toggleWorkPanel }) => {
           <AddToCartButton />
           <MapMenu />
         </div>
-        <CloseButton onclick={toggleWorkPanel} />
+        <CloseButton action={() => dispatch(closeWorkPanel())} />
       </div>
     </section>
   );

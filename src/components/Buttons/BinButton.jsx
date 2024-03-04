@@ -1,6 +1,6 @@
-export const BinButton = () => {
+export const BinButton = ({ action }) => {
   return (
-    <svg className="button binButton">
+    <svg className="button binButton" onClick={action}>
       <path
         d="M12.4,9.6c0-0.2-0.1-0.3-0.3-0.3c-0.1,0-0.3,0-0.4,0.1c-0.1,0.1-0.1,0.2-0.1,0.3c0,1.4,0,2.8,0,4.3c0,1.4,0,2.8,0,4.2
 	c0,0,0,0.1,0,0.1c0,0.2,0.2,0.4,0.5,0.3c0.2-0.1,0.3-0.2,0.3-0.4c0-2.8,0-5.7,0-8.5C12.4,9.7,12.4,9.6,12.4,9.6z M9.5,13.9

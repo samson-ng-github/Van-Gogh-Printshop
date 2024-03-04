@@ -1,26 +1,40 @@
-import img from '../../assets/workThumbs/2802032.jpg';
+import { useDispatch } from 'react-redux';
+import {
+  increaseCartItem,
+  decreaseCartItem,
+  removeCartItem,
+} from '../../redux/cartSlice';
+
 import PlusButton from '../Buttons/PlusButton';
 import MinusButton from '../Buttons/MinusButton';
 import BinButton from '../Buttons/BinButton';
 
-const CartItem = () => {
+const CartItem = ({ id, src, name, size, price, amount }) => {
+  const dispatch = useDispatch();
+
   return (
     <li>
-      <img src={img}></img>
+      <img src={src}></img>
       <div className="itemInfo">
-        <p className="itemTitle">
-          Village Street and Steps in Auvers with Two Figures
-        </p>
+        <p className="itemTitle">{name}</p>
         <hr />
-        <span className="itemSize">94 x 74cm</span>
-        <span className="itemPrice">£23.19</span>
+        <span className="itemSize">{`${size} cm`}</span>
+        <span className="itemPrice">{`£${price}`}</span>
         <hr />
         <div className="itemCount">
-          <span className="itemCountText">2</span>
-          <PlusButton />
-          <MinusButton />
+          <span className="itemCountText">{amount}</span>
+          <PlusButton action={() => dispatch(increaseCartItem(id))} />
+          <MinusButton
+            action={() => {
+              if (amount === 1) {
+                dispatch(removeCartItem(id));
+                return;
+              }
+              dispatch(decreaseCartItem(id));
+            }}
+          />
         </div>
-        <BinButton />
+        <BinButton action={() => dispatch(removeCartItem(id))} />
       </div>
     </li>
   );

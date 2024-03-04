@@ -1,6 +1,6 @@
-export const CloseButton = ({ onclick }) => {
+export const CloseButton = ({ action }) => {
   return (
-    <svg className="button closeButton" onClick={onclick}>
+    <svg className="button closeButton" onClick={action}>
       <circle cx="12" cy="12" r="12" />
       <path
         style={{ fill: 'white' }}
