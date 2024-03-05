@@ -17,7 +17,6 @@ const cartSlice = createSlice({
       const repeatedItem = state.cartData.find(
         (cartItem) => cartItem.id === id
       );
-      console.log(repeatedItem);
       if (!repeatedItem) state.cartData.push(item);
       else repeatedItem.amount += 1;
     },
@@ -35,22 +34,15 @@ const cartSlice = createSlice({
       const id = action.payload;
       state.cartData = state.cartData.filter((cartItem) => cartItem.id !== id);
     },
-    calculateEach: (state) => {
-      let dimensions = [];
-      state.cartData.forEach((cartItem) => {
-        dimensions = cartItem.size.split(' x ');
-        cartItem.price = (
-          (Number(dimensions[0]) * Number(dimensions[1])) /
-          100
-        ).toFixed(2);
-      });
-    },
     calculateTotal: (state) => {
       let totalPrice = 0;
       state.cartData.forEach((cartItem) => {
-        totalPrice += cartItem.amount * Number(cartItem.price);
+        totalPrice += cartItem.amount * Number(cartItem.productPrice);
+        console.log(cartItem.productPrice);
+        console.log(totalPrice);
       });
       state.totalPrice = totalPrice.toFixed(2);
+      console.log(state.totalPrice);
     },
     openCartPanel: (state) => {
       state.isCartPanelOn = true;

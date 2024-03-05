@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const Shade = () => {
-  const { isCartPanelOn } = useSelector((store) => store.works);
+  const { isCartPanelOn } = useSelector((store) => store.cart);
   const { isSearchPanelOn } = useSelector((store) => store.searchPanel);
   const { isWorkPanelOn } = useSelector((store) => store.works);
 

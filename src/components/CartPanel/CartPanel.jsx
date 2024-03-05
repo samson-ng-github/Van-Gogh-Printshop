@@ -1,9 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  calculateEach,
-  calculateTotal,
-  closeCartPanel,
-} from '../../redux/cartSlice';
+import { calculateTotal, closeCartPanel } from '../../redux/cartSlice';
 import { useEffect } from 'react';
 
 import CartItem from './CartItem';
@@ -32,7 +28,6 @@ const CartPanel = () => {
   });
 
   useEffect(() => {
-    dispatch(calculateEach());
     dispatch(calculateTotal());
   }, [cartData]);
 
