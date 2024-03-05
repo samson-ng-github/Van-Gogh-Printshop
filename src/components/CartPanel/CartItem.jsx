@@ -9,7 +9,7 @@ import PlusButton from '../Buttons/PlusButton';
 import MinusButton from '../Buttons/MinusButton';
 import BinButton from '../Buttons/BinButton';
 
-const CartItem = ({ id, src, name, size, price, amount }) => {
+const CartItem = ({ id, src, name, size, price, amount, productSize }) => {
   const dispatch = useDispatch();
 
   return (
@@ -18,7 +18,7 @@ const CartItem = ({ id, src, name, size, price, amount }) => {
       <div className="itemInfo">
         <p className="itemTitle">{name}</p>
         <hr />
-        <span className="itemSize">{`${size} cm`}</span>
+        <span className="itemSize">{`${productSize}`}</span>
         <span className="itemPrice">{`£${price}`}</span>
         <hr />
         <div className="itemCount">

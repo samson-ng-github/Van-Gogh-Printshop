@@ -4,7 +4,7 @@ import {
   openSearchPanel,
   closeSearchPanel,
 } from '../../redux/searchPanelSlice';
-import { closeWorkPanel } from '../../redux/workPanelSlice';
+import { closeWorkPanel } from '../../redux/worksSlice';
 
 import LoginButton from './LoginButton';
 import CartButton from './CartButton';

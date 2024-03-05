@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import searchPanelReducer from './searchPanelSlice';
-import workPanelReducer from './workPanelSlice';
+import workPanelReducer from './worksSlice';
 
 const store = configureStore({
   reducer: {
-    cartPanel: cartReducer,
+    cart: cartReducer,
     searchPanel: searchPanelReducer,
-    workPanel: workPanelReducer,
+    works: workPanelReducer,
   },
 });
 

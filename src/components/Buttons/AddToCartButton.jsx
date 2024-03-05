@@ -1,6 +1,6 @@
-const AddToCartButton = () => {
+const AddToCartButton = ({ action }) => {
   return (
-    <svg id="addToCartButton">
+    <svg id="addToCartButton" onClick={action}>
       <path
         d="M36.9,23.3H34v-2.9c0-1-0.8-1.9-1.9-1.9c-1,0-1.9,0.8-1.9,1.9v2.9h-2.9c-1,0-1.9,0.8-1.9,1.9c0,1,0.8,1.9,1.9,1.9h2.9V30
 	c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-2.9h2.9c1,0,1.9-0.8,1.9-1.9C38.7,24.2,37.9,23.3,36.9,23.3z M30,0C13.4,0,0,13.4,0,30

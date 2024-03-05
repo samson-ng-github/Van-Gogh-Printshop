@@ -2,15 +2,25 @@ import { createSlice } from '@reduxjs/toolkit';
 import cartData from '../data/cartData.json';
 
 const initialState = {
-  cartData: cartData,
+  cartData: [],
   totalPrice: 0,
   isCartPanelOn: false,
 };
 
 const cartSlice = createSlice({
-  name: 'cartPanel',
+  name: 'cart',
   initialState,
   reducers: {
+    addCartItem: (state, action) => {
+      const item = action.payload;
+      const id = action.payload.id;
+      const repeatedItem = state.cartData.find(
+        (cartItem) => cartItem.id === id
+      );
+      console.log(repeatedItem);
+      if (!repeatedItem) state.cartData.push(item);
+      else repeatedItem.amount += 1;
+    },
     increaseCartItem: (state, action) => {
       const id = action.payload;
       const cartItem = state.cartData.find((cartItem) => cartItem.id === id);
@@ -53,6 +63,7 @@ const cartSlice = createSlice({
 
 export default cartSlice.reducer;
 export const {
+  addCartItem,
   increaseCartItem,
   decreaseCartItem,
   removeCartItem,

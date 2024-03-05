@@ -12,7 +12,7 @@ import CloseButton from '../Buttons/CloseButton';
 
 const CartPanel = () => {
   const { cartData, totalPrice, isCartPanelOn } = useSelector(
-    (store) => store.cartPanel
+    (store) => store.cart
   );
   const dispatch = useDispatch();
 
@@ -21,11 +21,12 @@ const CartPanel = () => {
       <CartItem
         key={cartItem.id}
         id={cartItem.id}
-        src={'/src/assets/workThumbs/' + cartItem.id + '.jpg'}
-        name={cartItem.name}
+        src={'/src/assets/workThumbs/' + cartItem.id.split(' ')[0] + '.jpg'}
+        name={`${cartItem.name} (${cartItem.productType})`}
         size={cartItem.size}
-        price={cartItem.price}
+        price={cartItem.productPrice}
         amount={cartItem.amount}
+        productSize={cartItem.productSize}
       />
     );
   });

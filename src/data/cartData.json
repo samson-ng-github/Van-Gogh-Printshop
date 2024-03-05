@@ -5,8 +5,9 @@
     "location": "Hermitage Museum, Saint Petersburg",
     "size": "60 x 73",
     "id": "7501984",
+    "productSize": "Original size",
     "amount": 1,
-    "productSize": "Original"
+    "price": null
   },
   {
     "name": "Houses in Auvers",
@@ -14,8 +15,9 @@
     "location": "Museum of Fine Arts, Boston",
     "size": "72 x 60.5",
     "id": "8051989",
+    "productSize": "Original size",
     "amount": 1,
-    "productSize": "Original"
+    "price": null
   },
   {
     "name": "Chestnut Tree in Blossom",
@@ -23,8 +25,9 @@
     "location": "Kröller-Müller Museum, Otterlo",
     "size": "63 x 50.5",
     "id": "7521991",
+    "productSize": "Original size",
     "amount": 1,
-    "productSize": "Original"
+    "price": null
   },
   {
     "name": "Chestnut Tree in Blossom",
@@ -32,8 +35,9 @@
     "location": "Private collection",
     "size": "70 x 58",
     "id": "7511992",
+    "productSize": "Original size",
     "amount": 1,
-    "productSize": "Original"
+    "price": null
   },
   {
     "name": "The House of Père Pilon",
@@ -41,7 +45,8 @@
     "location": "Private collection",
     "size": "49 x 70",
     "id": "7911995",
+    "productSize": "Original size",
     "amount": 1,
-    "productSize": "Original"
+    "price": null
   }
 ]

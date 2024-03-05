@@ -253,10 +253,10 @@ p {
   top: 50%;
   transform: translateY(-50%);
   filter: drop-shadow(0 0 4rem black);
-  position: absolute;
+  position: relative;
 }
 
-#workHero {
+#workOnFocus {
   top: 0;
   left: 0;
   width: 400px;
@@ -311,6 +311,7 @@ p {
 }
 
 #workPrices label .type {
+  font-size: 10px;
   padding-left: 5px;
 }
 
@@ -513,7 +514,7 @@ p {
     margin-left: -230px;
   }
 
-  #workHero {
+  #workOnFocus {
     position: relative;
     max-height: 300px;
     object-fit: contain;
@@ -642,7 +643,7 @@ p {
     transform: none;
     margin: 0;
   }
-  #workHero {
+  #workOnFocus {
     min-width: 260px;
     width: 100%;
     box-sizing: border-box;
@@ -676,10 +677,6 @@ p {
 }
 
 @media only screen and (max-width: 350px) {
-  #workPrices label .type {
-    font-size: 10px;
-  }
-
   .itemInfo {
     font-size: 12px;
   }
