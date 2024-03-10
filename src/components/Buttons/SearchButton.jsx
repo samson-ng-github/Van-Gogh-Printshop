@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import MagnifierButton from './MagnifierButton';
 import ClearButton from './ClearButton';
+import { clearSearch } from '../../redux/worksSlice';
 
 const SearchButton = () => {
-  const [showCross, setShowCross] = useState(false);
+  const { searchFilter, searchKeyword } = useSelector((store) => store.works);
+  const dispatch = useDispatch();
 
-  const toggleShowCross = () => setShowCross(!showCross);
+  const handleChange = () => {
+    dispatch(clearSearch());
+  };
 
   return (
     <>
-      {showCross ? (
-        <ClearButton onclick={toggleShowCross} />
+      {searchFilter || searchKeyword ? (
+        <ClearButton onclick={handleChange} />
       ) : (
-        <MagnifierButton onclick={toggleShowCross} />
+        <MagnifierButton />
       )}
     </>
   );

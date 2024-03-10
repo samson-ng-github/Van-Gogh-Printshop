@@ -1,202 +1,231 @@
 [
   {
     "name": "Thatched Cottages and Houses",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Hermitage Museum, Saint Petersburg",
-    "size": "60 x 73",
+    "size": "73 x 60",
     "id": "7501984"
   },
   {
     "name": "Houses in Auvers",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Museum of Fine Arts, Boston",
-    "size": "72 x 60.5",
+    "size": "60.5 x 72",
     "id": "8051989"
   },
   {
     "name": "Chestnut Tree in Blossom",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Kröller-Müller Museum, Otterlo",
-    "size": "63 x 50.5",
+    "size": "50.5 x 63",
     "id": "7521991"
   },
   {
     "name": "Chestnut Tree in Blossom",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Private collection",
-    "size": "70 x 58",
+    "size": "58 x 70",
     "id": "7511992"
   },
   {
     "name": "The House of Père Pilon",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Private collection",
-    "size": "49 x 70",
+    "size": "70 x 49",
     "id": "7911995"
   },
   {
     "name": "Doctor Gachet's Garden in Auvers",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "73 x 51.5",
+    "size": "51.5 x 73",
     "id": "7551999"
   },
   {
     "name": "Village Street in Auvers",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Ateneum, Helsinki",
-    "size": "73 x 92",
+    "size": "92 x 73",
     "id": "8022001"
   },
   {
     "name": "The House of Père Eloi",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Private collection",
-    "size": "51 x 58",
+    "size": "58 x 51",
     "id": "7942002"
   },
   {
     "name": "View of Vessenots Near Auvers",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Thyssen-Bornemisza Museum, Madrid",
-    "size": "55 x 65",
+    "size": "65 x 55",
     "id": "7972003"
   },
   {
     "name": "Blossoming Chestnut Branches",
+    "type": "stillLife",
     "date": "May 1890",
     "location": "Foundation E.G. Bührle, Zürich",
-    "size": "72 x 91",
+    "size": "91 x 72",
     "id": "8202010"
   },
   {
     "name": "Village Street and Steps in Auvers with Figures",
+    "type": "landscape",
     "date": "May 1890",
     "location": "Saint Louis Art Museum",
-    "size": "49.8 x 70.1",
+    "size": "70.1 x 49.8",
     "id": "7952111"
   },
   {
     "name": "View of Auvers",
+    "type": "landscape",
     "date": "May-June 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50 x 52",
+    "size": "52 x 50",
     "id": "7992004"
   },
   {
     "name": "Farmhouse with Two Figures",
+    "type": "landscape",
     "date": "May-June 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "38 x 45",
+    "size": "45 x 38",
     "id": "8062017"
   },
   {
     "name": "Village Street and Steps in Auvers with Two Figures",
+    "type": "landscape",
     "date": "May-June 1890",
     "location": "Private collection",
-    "size": "20.5 x 26",
+    "size": "26 x 20.5",
     "id": "7962110"
   },
   {
     "name": "Thatched Cottages at Cordeville",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "72 x 91",
+    "size": "91 x 72",
     "id": "7921987"
   },
   {
     "name": "Houses at Auvers",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Toledo Museum of Art",
-    "size": "60.6 x 73",
+    "size": "73 x 60.6",
     "id": "7591988"
   },
   {
     "name": "Marguerite Gachet in the Garden",
+    "type": "landscape, portrait",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "46 x 55",
+    "size": "55 x 46",
     "id": "7562005"
   },
   {
     "name": "The Church at Auvers",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "94 x 74",
+    "size": "74 x 94",
     "id": "7892006"
   },
   {
     "name": "Portrait of Dr. Gachet",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "67 x 56",
+    "size": "56 x 67",
     "id": "7532007"
   },
   {
     "name": "Pink Roses",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Ny Carlsberg Glyptotek, Copenhagen",
-    "size": "32 x 40.5",
+    "size": "40.5 x 32",
     "id": "5952009"
   },
   {
     "name": "Portrait of Dr. Gachet",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "68 x 57",
+    "size": "57 x 68",
     "id": "7542014"
   },
   {
     "name": "Blossoming Acacia Branches",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Nationalmuseum, Stockholm",
-    "size": "32.5 x 24",
+    "size": "24 x 32.5",
     "id": "8212015"
   },
   {
     "name": "Thatched Cottages in Jorgus",
+    "type": "landscape",
     "date": "June 1890",
-    "location": "Private collections",
-    "size": "33 x 40.5",
+    "location": "Private collection",
+    "size": "40.5 x 33",
     "id": "7582016"
   },
   {
     "name": "Wheat Field at Auvers with White House",
+    "type": "landscape",
     "date": "June 1890",
     "location": "The Phillips Collection, Washington D.C.",
-    "size": "48.6 x 83.2",
+    "size": "83.2 x 48.6",
     "id": "8042018"
   },
   {
     "name": "Landscape with a Carriage and a Train",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Pushkin Museum, Moscow",
-    "size": "72 x 90",
+    "size": "90 x 72",
     "id": "7602019"
   },
   {
     "name": "Vineyards with a View of Auvers",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Saint Louis Art Museum",
-    "size": "64.2 x 79.5",
+    "size": "79.5 x 64.2",
     "id": "7622020"
   },
   {
     "name": "The Little Stream",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "25.5 x 40",
+    "size": "40 x 25.5",
     "id": "7402022"
   },
   {
     "name": "Poppy Field",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Kunstmuseum Den Haag, The Hague",
-    "size": "73 x 91.5",
+    "size": "91.5 x 73",
     "id": "6362027"
   },
   {
     "name": "Daubigny's Garden",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Van Gogh Museum, Amsterdam",
     "size": "50.7 x 50.7",
@@ -204,48 +233,55 @@
   },
   {
     "name": "Wild Flowers and Thistles in a Vase",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "67 x 47",
+    "size": "47 x 67",
     "id": "7632030"
   },
   {
     "name": "White House at Night",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Hermitage Museum, Saint Petersburg",
-    "size": "59.5 x 73",
+    "size": "73 x 59.5",
     "id": "7662031"
   },
   {
     "name": "Still Life: Red Poppies and Daisies",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "65 x 50",
+    "size": "50 x 65",
     "id": "2802032"
   },
   {
     "name": "Still Life: Glass with Wild Flowers",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "41 x 34",
+    "size": "34 x 41",
     "id": "5892033"
   },
   {
     "name": "Ears of Wheat",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "64.5 x 48.5",
+    "size": "48.5 x 64.5",
     "id": "7672034"
   },
   {
     "name": "Portrait of Adeline Ravoux",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "67 x 55",
+    "size": "55 x 67",
     "id": "7682035"
   },
   {
     "name": "Portrait of Adeline Ravoux",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Cleveland Museum of Art",
     "size": "52 x 52",
@@ -253,48 +289,55 @@
   },
   {
     "name": "Portrait of Adeline Ravoux",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "73.7 x 54.7",
+    "size": "54.7 x 73.7",
     "id": "7692037"
   },
   {
     "name": "Wheat Fields near Auvers",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Österreichische Galerie Belvedere, Vienna",
-    "size": "50 x 101.1",
+    "size": "101.1 x 50",
     "id": "7752038"
   },
   {
     "name": "Landscape with the Chateau of Auvers at Sunset",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50 x 101",
+    "size": "101 x 50",
     "id": "7702040"
   },
   {
     "name": "Undergrowth with Two Figures",
+    "type": "landscape",
     "date": "June 1890",
     "location": "Cincinnati Art Museum",
-    "size": "50 x 100.5",
+    "size": "100.5 x 50",
     "id": "7732041"
   },
   {
     "name": "Still Life: Glass with Carnations",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "41 x 32",
+    "size": "32 x 41",
     "id": "5982043"
   },
   {
     "name": "Still Life: Vase with Flower and Thistles",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Pola Museum of Art, Hakone",
-    "size": "41 x 34",
+    "size": "34 x 41",
     "id": "5992044"
   },
   {
     "name": "Still Life: Japanese Vase with Roses and Anemones",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
     "size": "51 x 51",
@@ -302,240 +345,274 @@
   },
   {
     "name": "Still Life: Vase with Rose-Mallows",
+    "type": "stillLife",
     "date": "June 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "42 x 29",
+    "size": "29 x 42",
     "id": "7642046"
   },
   {
     "name": "Marguerite Gachet at the Piano",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Kunstmuseum Basel",
-    "size": "102.6 x 50",
+    "size": "50 x 102.6",
     "id": "7722048"
   },
   {
     "name": "Young Man with Cornflower",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "40.5 x 32",
+    "size": "32 x 40.5",
     "id": "7872050"
   },
   {
     "name": "Two Children",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Musée d'Orsay, Paris",
-    "size": "51.2 x 51",
+    "size": "51 x 51.2",
     "id": "7832051"
   },
   {
     "name": "Two Children",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "51.5 x 46.5",
+    "size": "46.5 x 51.5",
     "id": "7842052"
   },
   {
     "name": "Peasant Woman Against a Background of Wheat",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "92 x 73",
+    "size": "73 x 92",
     "id": "7742053"
   },
   {
     "name": "Girl in White",
+    "type": "portrait",
     "date": "June 1890",
     "location": "National Gallery of Art, Washington, D.C.",
-    "size": "66 x 45",
+    "size": "45 x 66",
     "id": "7882055"
   },
   {
     "name": "The Little Arlesienne",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Kröller-Müller Museum, Otterlo",
-    "size": "51 x 49",
+    "size": "49 x 51",
     "id": "5182056"
   },
   {
     "name": "Child with Orange",
+    "type": "portrait",
     "date": "June 1890",
     "location": "Private collection",
-    "size": "50 x 51",
+    "size": "51 x 50",
     "id": "7852057"
   },
   {
     "name": "Garden in Auvers",
+    "type": "landscape",
     "date": "June-July 1890",
     "location": "Private collection",
-    "size": "64 x 80",
+    "size": "80 x 64",
     "id": "8142107"
   },
   {
     "name": "The Grove",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "73 x 92",
+    "size": "92 x 73",
     "id": "8171319"
   },
   {
     "name": "Wheat Field with Sheaves and Reaper",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Toledo Museum of Art",
-    "size": "73.6 x 93",
+    "size": "93 x 73.6",
     "id": "5591479"
   },
   {
     "name": "Bank of the Oise at Auvers",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Detroit Institute of Arts",
-    "size": "73.3 x 93.6",
+    "size": "93.6 x 73.3",
     "id": "7982021"
   },
   {
     "name": "The Cows, after Jordaens",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Palais des Beaux-Arts de Lille",
-    "size": "55 x 65",
+    "size": "65 x 55",
     "id": "8222095"
   },
   {
     "name": "Landscape at Auvers in the Rain",
+    "type": "landscape",
     "date": "July 1890",
     "location": "National Museum Cardiff",
-    "size": "50 x 100",
+    "size": "100 x 50",
     "id": "8112096"
   },
   {
     "name": "Wheat Field under Clouded Sky",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50 x 100.5",
+    "size": "100.5 x 50",
     "id": "7782097"
   },
   {
     "name": "Field with Wheat Stacks",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50 x 100",
+    "size": "100 x 50",
     "id": "8092098"
   },
   {
     "name": "Plain near Auvers",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Neue Pinakothek, Munich",
-    "size": "73.3 x 92",
+    "size": "92 x 73.3",
     "id": "7822099"
   },
   {
     "name": "Wheat Fields",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "50 x 40",
+    "size": "40 x 50",
     "id": "8122101"
   },
   {
     "name": "Wheat Fields at Auvers under Clouded Sky",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Carnegie Museum of Art, Pittsburgh",
-    "size": "73 x 92",
+    "size": "92 x 73",
     "id": "7812102"
   },
   {
     "name": "Daubigny's Garden",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Hiroshima Museum of Art",
-    "size": "53 x 103",
+    "size": "103 x 53",
     "id": "7762104"
   },
   {
     "name": "Daubigny's Garden",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Kunstmuseum Basel",
-    "size": "50 x 101.5",
+    "size": "101.5 x 50",
     "id": "7772105"
   },
   {
     "name": "The Town Hall at Auvers",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "72 x 93",
+    "size": "93 x 72",
     "id": "7902108"
   },
   {
     "name": "Two Women Crossing the Fields",
+    "type": "landscape portrait",
     "date": "July 1890",
     "location": "McNay Art Museum, San Antonio",
-    "size": "32 x 64",
+    "size": "64 x 32",
     "id": "8192112"
   },
   {
     "name": "Tree Roots",
+    "type": "stillLife",
     "date": "July 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50 x 100",
+    "size": "100 x 50",
     "id": "8162113"
   },
   {
     "name": "Farms near Auvers",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Tate, London",
-    "size": "50.2 x 100.3",
+    "size": "100.3 x 50.2",
     "id": "7932114"
   },
   {
     "name": "Thatched Sandstone Cottages in Chaponval",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Kunsthaus Zürich",
-    "size": "65 x 81",
+    "size": "81 x 65",
     "id": "7802115"
   },
   {
     "name": "Wheatfield with Crows",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Van Gogh Museum, Amsterdam",
-    "size": "50.5 x 103",
+    "size": "103 x 50.5",
     "id": "7792117"
   },
   {
     "name": "Wheat Field with Cornflowers",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "60 x 81",
+    "size": "81 x 60",
     "id": "8082118"
   },
   {
     "name": "The Fields",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "50 x 65",
+    "size": "65 x 50",
     "id": "7612120"
   },
   {
     "name": "Haystacks under a Rainy Sky",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Kröller-Müller Museum, Otterlo",
-    "size": "64 x 52.5",
+    "size": "52.5 x 64",
     "id": "5632121"
   },
   {
     "name": "View of Auvers with Church",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Rhode Island School of Design Museum, Providence",
-    "size": "34 x 42",
+    "size": "42 x 34",
     "id": "8002122"
   },
   {
     "name": "Wheat Fields with Auvers in the Background",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Private collection",
-    "size": "43 x 50",
+    "size": "50 x 43",
     "id": "8012123"
   },
   {
     "name": "Sheaves of Wheat",
+    "type": "landscape",
     "date": "July 1890",
     "location": "Dallas Museum of Art",
-    "size": "50.5 x 101",
+    "size": "101 x 50.5",
     "id": "7712125"
   }
 ]

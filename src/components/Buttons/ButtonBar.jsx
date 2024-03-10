@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterWorks } from '../../redux/worksSlice';
+
 import PortraitButton from './PortraitButton';
 import LandscapeButton from './LandscapeButton';
 import StillLifeButton from './StillLifeButton';
@@ -6,28 +9,59 @@ import MapButton from './MapButton';
 
 const ButtonBar = ({ buttonType, label }) => {
   const [highlight, setHighlight] = useState(false);
-  const color = '#1f3279'; // Complimentary purple '#0132FF';
+  const dispatch = useDispatch();
+  const { searchFilter } = useSelector((store) => store.works);
+  const highlightColor = 'black';
+  const baseColor = '#e43816';
+
+  useEffect(() => {
+    if (searchFilter !== buttonType) setHighlight(false);
+    else setHighlight(true);
+  }, [searchFilter]);
 
   const getButton = (buttonType) => {
     switch (buttonType) {
-      case 'PortraitButton':
-        return <PortraitButton style={highlight ? { fill: color } : {}} />;
+      case 'portrait':
+        return (
+          <PortraitButton
+            style={highlight ? { fill: highlightColor } : { fill: baseColor }}
+          />
+        );
         break;
-      case 'LandscapeButton':
-        return <LandscapeButton style={highlight ? { fill: color } : {}} />;
+      case 'landscape':
+        return (
+          <LandscapeButton
+            style={highlight ? { fill: highlightColor } : { fill: baseColor }}
+          />
+        );
         break;
-      case 'StillLifeButton':
-        return <StillLifeButton style={highlight ? { fill: color } : {}} />;
+      case 'stillLife':
+        return (
+          <StillLifeButton
+            style={highlight ? { fill: highlightColor } : { fill: baseColor }}
+          />
+        );
         break;
-      case 'MapButton':
-        return <MapButton style={highlight ? { fill: color } : {}} />;
+      case 'map':
+        return (
+          <MapButton
+            style={highlight ? { fill: highlightColor } : { fill: baseColor }}
+          />
+        );
     }
   };
 
+  const handleClick = () => {
+    if (buttonType !== 'map') dispatch(filterWorks(buttonType));
+  };
+
   return (
-    <div className="buttonBar" onClick={() => setHighlight(!highlight)}>
+    <div className="buttonBar" onClick={handleClick}>
       {getButton(buttonType)}
-      <p className="label" style={highlight ? { color: color } : {}}>
+      <p
+        className="label"
+        style={highlight ? { color: highlightColor } : { color: baseColor }}
+      >
         {label}
       </p>
     </div>

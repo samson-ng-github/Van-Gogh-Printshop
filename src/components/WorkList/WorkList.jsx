@@ -11,6 +11,8 @@ const WorkList = ({ workList }) => {
     dispatch(shuffleWorks());
   }, []);
 
+  useEffect(() => {}, [worksData]);
+
   const WorkListUi = worksData.map((work) => {
     return (
       <WorkThumb
@@ -24,7 +26,11 @@ const WorkList = ({ workList }) => {
 
   return (
     <main id="workList">
-      <ul>{WorkListUi}</ul>;
+      {worksData.length ? (
+        <ul>{WorkListUi}</ul>
+      ) : (
+        <p id="noWorks">Your search return no matches.</p>
+      )}
     </main>
   );
 };

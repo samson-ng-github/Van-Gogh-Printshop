@@ -5,9 +5,9 @@ const SearchMenu = () => {
   return (
     <div className="searchMenu">
       <SearchBar />
-      <ButtonBar buttonType="PortraitButton" label="Portrait" />
-      <ButtonBar buttonType="LandscapeButton" label="Landscape" />
-      <ButtonBar buttonType="StillLifeButton" label="Still life" />
+      <ButtonBar buttonType="portrait" label="Portrait" />
+      <ButtonBar buttonType="landscape" label="Landscape" />
+      <ButtonBar buttonType="stillLife" label="Still life" />
     </div>
   );
 };

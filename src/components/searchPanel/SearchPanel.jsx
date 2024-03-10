@@ -14,7 +14,7 @@ const SearchPanel = () => {
       className={'searchPanelOff ' + (isSearchPanelOn ? 'searchPanelOn' : '')}
     >
       <SearchMenu />
-      <MapMenu />
+      {/*<MapMenu />*/}
       <CloseButton action={() => dispatch(closeSearchPanel())} />
     </div>
   );

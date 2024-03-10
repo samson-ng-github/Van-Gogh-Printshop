@@ -5,7 +5,7 @@ const MapMenu = () => {
     <div className="mapMenu">
       <p>Find out where the real paintings are here:</p>
       <div className="mapButtonBar">
-        <ButtonBar buttonType="MapButton" label="Map view" />
+        <ButtonBar buttonType="map" label="Map view" />
       </div>
     </div>
   );

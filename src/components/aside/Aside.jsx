@@ -16,7 +16,7 @@ const Aside = ({ randomizeWorkList }) => {
         Auvers-sur-Oise.
       </p>
       <SearchMenu />
-      <MapMenu />
+      {/*<MapMenu />*/}
     </aside>
   );
 };

@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { calculateTotal, closeCartPanel } from '../../redux/cartSlice';
+import {
+  clearCart,
+  calculateTotal,
+  closeCartPanel,
+} from '../../redux/cartSlice';
 import { useEffect } from 'react';
 
 import CartItem from './CartItem';
@@ -40,9 +44,14 @@ const CartPanel = () => {
         ) : (
           <>
             <ul id="cartItems">{cartList}</ul>
-            <div id="cartTotal">
-              <div id="total">Total</div>
-              <div id="totalPrice">{`£${totalPrice}`}</div>
+            <div id="cartSummery">
+              <div id="clearCart" onClick={() => dispatch(clearCart())}>
+                Clear cart
+              </div>
+              <div id="totalPrice">
+                <span id="totalWord">Total</span>
+                <span id="totalFigure">{`£${totalPrice}`}</span>
+              </div>
             </div>
             <CheckoutButton />
           </>

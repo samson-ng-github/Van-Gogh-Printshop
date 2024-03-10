@@ -34,15 +34,15 @@ const cartSlice = createSlice({
       const id = action.payload;
       state.cartData = state.cartData.filter((cartItem) => cartItem.id !== id);
     },
+    clearCart: (state) => {
+      state.cartData = [];
+    },
     calculateTotal: (state) => {
       let totalPrice = 0;
       state.cartData.forEach((cartItem) => {
         totalPrice += cartItem.amount * Number(cartItem.productPrice);
-        console.log(cartItem.productPrice);
-        console.log(totalPrice);
       });
       state.totalPrice = totalPrice.toFixed(2);
-      console.log(state.totalPrice);
     },
     openCartPanel: (state) => {
       state.isCartPanelOn = true;
@@ -59,7 +59,7 @@ export const {
   increaseCartItem,
   decreaseCartItem,
   removeCartItem,
-  calculateEach,
+  clearCart,
   calculateTotal,
   openCartPanel,
   closeCartPanel,

@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import worksData from '../data/worksData.json';
+import originalData from '../data/worksData.json';
 
 const initialState = {
-  worksData: worksData,
+  originalData: originalData,
+  worksData: originalData,
+  searchFilter: null,
+  searchKeyword: '',
   isWorkPanelOn: false,
-  workOnFocus: worksData[0],
+  workOnFocus: originalData[0],
 };
 
 const worksSlice = createSlice({
@@ -24,9 +27,69 @@ const worksSlice = createSlice({
     closeWorkPanel: (state) => {
       state.isWorkPanelOn = false;
     },
+    updateKeyword: (state, action) => {
+      const keyword = action.payload;
+      state.searchKeyword = keyword;
+    },
+    searchWorks: (state) => {
+      state.worksData = state.originalData.filter(
+        (work) =>
+          work.name
+            .toLocaleLowerCase()
+            .match(state.searchKeyword.toLocaleLowerCase()) ||
+          work.date
+            .toLocaleLowerCase()
+            .match(state.searchKeyword.toLocaleLowerCase()) ||
+          work.location
+            .toLocaleLowerCase()
+            .match(state.searchKeyword.toLocaleLowerCase())
+      );
+      if (state.searchFilter)
+        state.worksData = state.worksData.filter((work) =>
+          state.searchFilter.match(work.type)
+        );
+    },
+    filterWorks: (state, action) => {
+      const type = action.payload;
+      if (type === state.searchFilter) {
+        state.worksData = state.originalData.sort(() => Math.random() - 0.5);
+        state.searchFilter = null;
+      } else {
+        state.worksData = state.originalData
+          .filter((work) => work.type.match(type))
+          .sort(() => Math.random() - 0.5);
+        state.searchFilter = type;
+      }
+      if (state.searchKeyword !== '')
+        state.worksData = state.worksData.filter(
+          (work) =>
+            work.name
+              .toLocaleLowerCase()
+              .match(state.searchKeyword.toLocaleLowerCase()) ||
+            work.date
+              .toLocaleLowerCase()
+              .match(state.searchKeyword.toLocaleLowerCase()) ||
+            work.location
+              .toLocaleLowerCase()
+              .match(state.searchKeyword.toLocaleLowerCase())
+        );
+    },
+    clearSearch: (state) => {
+      state.searchFilter = null;
+      state.searchKeyword = '';
+      state.worksData = state.originalData;
+    },
   },
 });
 
 export default worksSlice.reducer;
-export const { shuffleWorks, findWorkOnFocus, openWorkPanel, closeWorkPanel } =
-  worksSlice.actions;
+export const {
+  shuffleWorks,
+  findWorkOnFocus,
+  openWorkPanel,
+  closeWorkPanel,
+  updateKeyword,
+  searchWorks,
+  filterWorks,
+  clearSearch,
+} = worksSlice.actions;
