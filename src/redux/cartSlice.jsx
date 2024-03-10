@@ -3,6 +3,8 @@ import cartData from '../data/cartData.json';
 
 const initialState = {
   cartData: [],
+  itemsPerPage: 4,
+  totalPages: 1,
   currentPage: 1,
   totalPrice: 0,
   isCartPanelOn: false,
@@ -23,6 +25,8 @@ const cartSlice = createSlice({
       );
       if (!repeatedItem) state.cartData.push(item);
       else repeatedItem.amount += 1;
+      state.totalPages = Math.ceil(state.cartData.length / state.itemsPerPage);
+      state.currentPage = state.totalPages;
     },
     increaseCartItem: (state, action) => {
       const id = action.payload;
@@ -37,6 +41,9 @@ const cartSlice = createSlice({
     removeCartItem: (state, action) => {
       const id = action.payload;
       state.cartData = state.cartData.filter((cartItem) => cartItem.id !== id);
+      state.totalPages = Math.ceil(state.cartData.length / state.itemsPerPage);
+      if (state.currentPage > state.totalPages)
+        state.currentPage = state.totalPages;
     },
     clearCart: (state) => {
       state.cartData = [];

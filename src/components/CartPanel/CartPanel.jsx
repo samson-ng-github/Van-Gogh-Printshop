@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setCurrentPage,
   clearCart,
   calculateTotal,
   closeCartPanel,
@@ -13,15 +12,18 @@ import CloseButton from '../Buttons/CloseButton';
 import Pagination from './Pagination';
 
 const CartPanel = () => {
-  const { cartData, currentPage, totalPrice, isCartPanelOn } = useSelector(
-    (store) => store.cart
-  );
+  const {
+    cartData,
+    itemsPerPage,
+    totalPages,
+    currentPage,
+    totalPrice,
+    isCartPanelOn,
+  } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
 
-  const itemsPerPage = 4;
   const firstItemIndex = (currentPage - 1) * itemsPerPage;
   const lastItemIndex = firstItemIndex + itemsPerPage;
-  const totalPages = Math.ceil(cartData.length / itemsPerPage);
 
   const cartList = [...cartData]
     .slice(firstItemIndex, lastItemIndex)
@@ -42,7 +44,6 @@ const CartPanel = () => {
 
   useEffect(() => {
     dispatch(calculateTotal());
-    dispatch(setCurrentPage(totalPages));
   }, [cartData]);
 
   return (

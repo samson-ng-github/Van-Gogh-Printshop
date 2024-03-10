@@ -9,6 +9,7 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
+    e.preventDefault();
     dispatch(updateKeyword(e.target.value));
 
     setTimeOutId(
@@ -24,7 +25,12 @@ const SearchBar = () => {
   }, [timeOutId]);
 
   return (
-    <form className="searchBar">
+    <form
+      className="searchBar"
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <input
         type="text"
         className="searchField"
