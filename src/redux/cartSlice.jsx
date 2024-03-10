@@ -3,6 +3,7 @@ import cartData from '../data/cartData.json';
 
 const initialState = {
   cartData: [],
+  currentPage: 1,
   totalPrice: 0,
   isCartPanelOn: false,
 };
@@ -11,6 +12,9 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    setCurrentPage: (state, action) => {
+      state.currentPage = action.payload;
+    },
     addCartItem: (state, action) => {
       const item = action.payload;
       const id = action.payload.id;
@@ -55,6 +59,7 @@ const cartSlice = createSlice({
 
 export default cartSlice.reducer;
 export const {
+  setCurrentPage,
   addCartItem,
   increaseCartItem,
   decreaseCartItem,

@@ -15,10 +15,12 @@ const WorkPanel = () => {
 
   const dimensions = workOnFocus.size.split(' x ');
 
+  const tf2 = (number) => number.toFixed(2);
+
   const sizes = {
     original: `${workOnFocus.size} cm`,
-    half: `${dimensions[0] / 2} x ${dimensions[1] / 2} cm`,
-    quarter: `${dimensions[0] / 4} x ${dimensions[1] / 4} cm`,
+    half: `${tf2(dimensions[0] / 2)} x ${tf2(dimensions[1] / 2)} cm`,
+    quarter: `${tf2(dimensions[0] / 4)} x ${tf2(dimensions[1] / 4)} cm`,
     postcard: '14 x 9 cm',
   };
 

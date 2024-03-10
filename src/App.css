@@ -369,6 +369,26 @@ p {
   font-size: 15px;
 }
 
+#cartPagination {
+  display: flex;
+  justify-content: start;
+  list-style-type: none;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.pageButton {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  background-color: #ffce01;
+  font-family: 'Bold';
+}
+
 #cartItems {
   display: flex;
   justify-content: start;
@@ -438,6 +458,7 @@ p {
   text-align: center;
   width: 125px;
   box-sizing: border-box;
+  border-radius: 15px;
 }
 
 #totalPrice {

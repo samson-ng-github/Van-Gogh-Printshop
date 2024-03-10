@@ -1,44 +1,55 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  setCurrentPage,
   clearCart,
   calculateTotal,
   closeCartPanel,
 } from '../../redux/cartSlice';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import CartItem from './CartItem';
 import CheckoutButton from '../Buttons/CheckoutButton';
 import CloseButton from '../Buttons/CloseButton';
+import Pagination from './Pagination';
 
 const CartPanel = () => {
-  const { cartData, totalPrice, isCartPanelOn } = useSelector(
+  const { cartData, currentPage, totalPrice, isCartPanelOn } = useSelector(
     (store) => store.cart
   );
   const dispatch = useDispatch();
 
-  const cartList = cartData.map((cartItem) => {
-    return (
-      <CartItem
-        key={cartItem.id}
-        id={cartItem.id}
-        src={'/src/assets/workThumbs/' + cartItem.id.split(' ')[0] + '.jpg'}
-        name={`${cartItem.name} (${cartItem.productType})`}
-        size={cartItem.size}
-        price={cartItem.productPrice}
-        amount={cartItem.amount}
-        productSize={cartItem.productSize}
-      />
-    );
-  });
+  const itemsPerPage = 4;
+  const firstItemIndex = (currentPage - 1) * itemsPerPage;
+  const lastItemIndex = firstItemIndex + itemsPerPage;
+  const totalPages = Math.ceil(cartData.length / itemsPerPage);
+
+  const cartList = [...cartData]
+    .slice(firstItemIndex, lastItemIndex)
+    .map((cartItem) => {
+      return (
+        <CartItem
+          key={cartItem.id}
+          id={cartItem.id}
+          src={'/src/assets/workThumbs/' + cartItem.id.split(' ')[0] + '.jpg'}
+          name={`${cartItem.name} (${cartItem.productType})`}
+          size={cartItem.size}
+          price={cartItem.productPrice}
+          amount={cartItem.amount}
+          productSize={cartItem.productSize}
+        />
+      );
+    });
 
   useEffect(() => {
     dispatch(calculateTotal());
+    dispatch(setCurrentPage(totalPages));
   }, [cartData]);
 
   return (
     <section className={'cartPanelOn ' + (isCartPanelOn ? 'cartPanelOff' : '')}>
       <div id="cartPanel">
         <h1 id="cartTitle">Shopping cart</h1>
+        <Pagination totalPages={totalPages} itemsPerPage={itemsPerPage} />
         {!cartData.length ? (
           <p id="cartMessage">Your shopping cart is currently empty.</p>
         ) : (
